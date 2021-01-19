@@ -1,38 +1,162 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f1f1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  width: 794px;
+  height: fit-content;
+  margin: 50px auto;
+  border: 3px solid black;
+  background-color: white;
+
+}
+
+#left-container {
+  float: left;
+  border-right: 1px solid black;
+  width: 30%;
+  height: 100%;
+}
+#right-container {
+  float: right;
+  width: 70%;
+  height: 100%;
+}
+#general-container{
+  display: block;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#name-container{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#name-container h1{
+  font-size: 46px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#name-container h1{
+  font-size: 38px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.address {
+  display: block;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+#image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+#image-container img{
+  width: 200px;
+}
+#about-container{
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#work-container{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#modal-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px;
+  width: 500px;
+  height: 450px;
+  border: 3px solid black;
+  background-color:#fbf7f5;
 }
 
-.App-link {
-  color: #61dafb;
+#modal-header{
+  align-self: center;
+  font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#row input {
+  width: 225px;
+  font-size: 20px;
+}
+
+#row{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+#bottom-row {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+#bottom-row textarea{
+  font-size: 20px;
+
+}
+
+.row-segment-left {
+  display: flex;
+  float: left;
+  flex-direction: column;
+}
+
+.row-segment-right {
+  display: flex;
+  flex-direction: column;
+  float: right;
+
+}
+
+#button-container{
+  width: 300px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+#button-container button{
+  width: 125px;
+  height: 35px;
+  font-size: 24px;
+}
+
+#keypoints-container {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+
+}
+
+.keypoint {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 20px;
 }

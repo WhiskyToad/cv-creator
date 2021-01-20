@@ -5,6 +5,7 @@ import General from './Components/General';
 import About from './Components/About';
 import KeyPoints from './Components/KeyPoints';
 import Work from './Components/Work';
+import Education from './Components/Education';
 import './App.css';
 
 
@@ -22,6 +23,7 @@ class App extends Component {
           <div id = "right-container">
             <Name />
             <Work />
+            <Education />
           </div>
         </div>
       </div>

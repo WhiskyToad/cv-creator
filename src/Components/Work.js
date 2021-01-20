@@ -1,6 +1,5 @@
-/*
+/* Wish list
 form checks
-cancel button to work
 edit the list
 
 */
@@ -15,8 +14,10 @@ class Work extends Component {
         this.state = {
             items: []
           };
-        this.addItem = this.addItem.bind(this);   
+        this.addItem = this.addItem.bind(this); 
+        this.deleteItem = this.deleteItem.bind(this);
     }
+
     addItem(e) {
         var newItem = {
             title: this.title.value,
@@ -32,7 +33,7 @@ class Work extends Component {
               items: prevState.items.concat(newItem) 
             };
           });
-         
+
           this.title.value = "";
           this.company.value = "";
           this.location.value = "";
@@ -41,11 +42,21 @@ class Work extends Component {
            
         e.preventDefault();
     } 
+    deleteItem(key) {
+        var filteredItems = this.state.items.filter(function (item) {
+          return (item.key !== key);
+        });
+       
+        this.setState({
+          items: filteredItems
+        });
+      }
 render(){
 return (
     <div id = "work-container">
         <h2>Experience:</h2>
-        <CreateItems entries = {this.state.items}/>
+        <CreateItems entries = {this.state.items}
+                     delete= {this.deleteItem}/>
     <Popup trigger={<button> Add New</button>}  modal nested>
     {close => (
     <form id = 'modal-container' onSubmit={this.addItem}>
